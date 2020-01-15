@@ -1,6 +1,6 @@
 .idea
 .git
 *.iml
-
+target
 */target/
 */src/test/

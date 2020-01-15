@@ -28,6 +28,11 @@ public class StreamCollector {
                 .collect(Collectors.toList());
 
         System.out.println(JSON.toJSONString(result, true));
+
+        List<Sku> s = result.stream().map(vo -> {
+            Sku sku = Sku.builder().skuId(1).skuName(vo.getSkuName()).build();
+            return sku;
+        }).collect(Collectors.toList());
     }
 
     /**
