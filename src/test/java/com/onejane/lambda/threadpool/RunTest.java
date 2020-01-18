@@ -12,7 +12,15 @@ import java.util.concurrent.Future;
  * @ Date : Created in 19:30 2019/10/18 0018
  * @ Description ：创建线程池的两种方式
  */
+
 public class RunTest {
+    /**
+     * newCachedThreadPool 线程数量无限的线程池 SynchronousQueue
+     * newFixedThreadPool 线程数量固定线程池 LinkedBlockingQueue
+     * newSingleThreadExecutor 单一线程线程池 LinkedBlockingQueue
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
 
     @Test
     public void submitTest() throws ExecutionException, InterruptedException {

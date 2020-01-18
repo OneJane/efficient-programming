@@ -12,6 +12,10 @@ import java.util.List;
  * @ Author : Weijian_Wang
  * @ Date : Created in 23:09 2019/10/16 0016
  * @ Description ：不可变集合用法
+ * 当对象不可信的库调用时，不可变形式是安全的
+ * 不可变对象被多个线程调用时，不存在惊态条件问题
+ * 不可变集合不需要考虑变化，可以节省时间和空间
+ * 不可变对象因为固定不变，可以作为常量来安全使用
  */
 public class ImmutableTest {
 
@@ -50,7 +54,7 @@ public class ImmutableTest {
         list.add(2);
         list.add(3);
 
-        List<Integer> newList = Collections.unmodifiableList(list);
+        List<Integer> newList = Collections.unmodifiableList(list); // 将可变list变成不可变集合
 
         test(newList);
 

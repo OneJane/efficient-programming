@@ -9,6 +9,7 @@ import lombok.NonNull;
  */
 public class NonNullTest {
 
+    // 优先判断是否为空
     public NonNullTest(@NonNull String field){
         System.out.println(field);
     }

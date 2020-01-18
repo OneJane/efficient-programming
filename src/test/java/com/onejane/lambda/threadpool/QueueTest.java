@@ -16,7 +16,7 @@ public class QueueTest {
     @Test
     public void arrayBlockingQueue() throws InterruptedException {
         /**
-         * 基于数组的有界队列，队列容量为10
+         * 基于数组的有界阻塞队列，队列容量为10
          */
         ArrayBlockingQueue queue = new ArrayBlockingQueue(10);
 
@@ -51,7 +51,7 @@ public class QueueTest {
         //插入值
         new Thread(() -> {
             try {
-                queue.put(1);
+                queue.put(1); //阻塞
                 System.out.println("插入成功");
             } catch (InterruptedException e) {
                 e.printStackTrace();

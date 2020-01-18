@@ -13,9 +13,23 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadVs {
 
+    /**
+     * 线程池 降低资源消耗 降低创建和销毁 随用随取，提高相应速度，提高线程的可管理性
+     * ThreadPoolExecutor
+     *  corePoolSize 核心线程数量
+     *  maximumPoolSize 最大线程数量
+     *  keepAliveTime 线程空闲后的存活时间
+     *  unit 时间单位
+     *  workQueue 用于存放任务的阻塞队列
+     *  threadFactory 线程工厂类
+     *  handler 当队列和最大线程池都满了后的饱和策略
+     * @throws InterruptedException
+     */
     @Test
-    public void newHandle() throws InterruptedException {
+    public void newHandle1() throws InterruptedException {
 
+
+        // 开启线程池 10个线程
         ExecutorService threadpool = Executors.newFixedThreadPool(10);
         //使用循环来模拟许多用户请求的场景
         for(int request = 1; request < 100; request ++){
@@ -35,10 +49,10 @@ public class ThreadVs {
     }
 
     /**
-     * 老的处理方式
+     * 老的处理方式 处理线程过多
      */
     @Test
-    public void oldHandle() throws InterruptedException {
+    public void oldHandle1() throws InterruptedException {
         /**
          * 使用循环模拟许多用户访问的场景
          */

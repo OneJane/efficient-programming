@@ -20,7 +20,7 @@ public class MultisetTest {
     public void handle(){
         //String 转成 char数组
         char[] chars = text.toCharArray();
-        //multiset创建
+        //multiset创建 无序可重复
         Multiset<Character> multiset = HashMultiset.create();
 
         //遍历数组，添加到multiset中

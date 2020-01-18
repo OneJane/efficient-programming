@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
         includeFieldNames = false,
 //        exclude = {"field1"},
 //        of = {"field1"},
-        doNotUseGetters = false
+        doNotUseGetters = false  // get中业务逻辑将不会被触发
 )
 public class ToStringTest {
 

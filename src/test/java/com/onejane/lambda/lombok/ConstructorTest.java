@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 
 //@AllArgsConstructor
 //@NoArgsConstructor
-    @RequiredArgsConstructor
+    @RequiredArgsConstructor // field1 field2
 public class ConstructorTest {
 
     private final String field1;
